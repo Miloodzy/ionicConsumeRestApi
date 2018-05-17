@@ -8,7 +8,7 @@ import { RestServiceProvider } from '../../providers/rest-service/rest-service';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
+  users: any; 
   constructor(public navCtrl: NavController, public restProvider: RestServiceProvider) {
    console.log('Home Constructor'); 
   }
@@ -17,12 +17,14 @@ export class HomePage {
     this.restProvider.getRestApi()
     .subscribe(
       (data)=>{
-        console.log(data);  
+        console.log(data);
+        this.users = data ;  
       },
       (error)=>{
         console.error(error);
       }
     )
   }
+
 } 
 
