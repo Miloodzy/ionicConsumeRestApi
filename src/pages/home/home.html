@@ -10,7 +10,11 @@
   <ion-list inset>
     <ion-item *ngFor="let user of users">
       <h2>{{user.username}}</h2>
-      <p>{{user.email}}</p>
+      <p>{{user.password}}</p>
     </ion-item>
   </ion-list>
+  <form (ngSubmit)="loginTest()">
+    <button ion-button type="submit" block>Add Todo</button>
+  </form>
+
 </ion-content>

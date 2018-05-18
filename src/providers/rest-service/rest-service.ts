@@ -19,5 +19,9 @@ export class RestServiceProvider {
     console.log('Hello getRestApi() !');
     return this.http.get('http://37.187.125.66:3000/users');
   }
+
+  postRestApi(json){ 
+    return this.http.post('http://37.187.125.66:3000/users', json);
+  }
   
 }

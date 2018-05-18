@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { AddUserPage } from '../../pages/add-user/add-user';
 import { RestServiceProvider } from '../../providers/rest-service/rest-service';
 
 @Component({
@@ -24,6 +24,10 @@ export class HomePage {
         console.error(error);
       }
     )
+  }
+
+  loginTest() {
+    this.navCtrl.push(AddUserPage);
   }
 
 } 
